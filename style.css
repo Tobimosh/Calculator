@@ -33,7 +33,7 @@ body{
     border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
   }
   
-  #Display-area .currentInput {
+  #Display-area .userInput {
     display: flex;
     text-align: right;
     height: 8vh;
@@ -43,7 +43,7 @@ body{
     word-wrap: break-word;
   }
   
-  #Display-area .answerScreen {
+  #Display-area .answerContainer {
     text-align: right;
     color: rgba(150, 150, 150, 0.87);
     height: 7px;
@@ -51,18 +51,33 @@ body{
     font-size: larger;
   }
   
-  .keypad-btns {
+  .btns {
     display: grid;
     grid: repeat(5, 70px) / repeat(4, 70px);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
   }
   
-  .keypad-btns button {
+  .btns button {
     outline: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #474b6b;
     color: #fff;
-    font-size: x-large;
+    font-size: x-large;  
   }
+
+  .btns .fun_btn {
+    color: #000;
+    background: #ffc652;
+    font-weight: bold;
+  }
+  
+  .num_btn:hover {
+    background-color: #282a3a;
+  }
+  
+  .opt_btn:hover {
+    background-color: #ffab00;
+  }
+  
