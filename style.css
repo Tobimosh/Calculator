@@ -12,7 +12,6 @@ body{
 
 .container{
     background-color: #131313;
-    /* min-width: 20px; */
     height: auto;
     display: flex;
     flex-direction: column;
