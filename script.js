@@ -31,8 +31,6 @@ buttons.forEach((btn) => {
         // When erase button is clicked
         if (btn.id.match('backspaceBtn')) {
             realTimeScreenValue.pop();
-            userInput.innerHTML = realTimeScreenValue.join('');
-            answerContainer.innerHTML = eval(realTimeScreenValue.join(''));
         }
 
         // When clicked button is evaluate button
@@ -40,6 +38,8 @@ buttons.forEach((btn) => {
             userInput.className = 'answerContainer';
             answerContainer.className = 'userInput';
             answerContainer.style.color = "white";
+            userInput.innerHTML = realTimeScreenValue.join('');
+            answerContainer.innerHTML = eval(realTimeScreenValue.join(''));
         }
 
         // To prevent undefined error in screen
