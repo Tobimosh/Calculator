@@ -6,6 +6,15 @@ let clearbtn = document.querySelector('#clearScreen');
 let evaluate = document.querySelector('#evaluate');
 let realTimeScreenValue = []
 
+document.addEventListener("keydown", (event) => {
+    let key = event.key;
+    let btn = document.querySelector(`button[value="${key}"]`);
+    if (btn) {
+      btn.click();
+    }
+  });
+  
+
 clearbtn.addEventListener("click", () => {
     realTimeScreenValue = [''];
     answerContainer.innerHTML = 0;
@@ -13,6 +22,7 @@ clearbtn.addEventListener("click", () => {
     answerContainer.className = 'answerContainer';
     answerContainer.style.color = " rgba(150, 150, 150, 0.87)";
 })
+
 
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
