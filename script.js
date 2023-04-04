@@ -24,6 +24,10 @@ buttons.forEach((btn) => {
 
         // To evaluate answer in real time
         if (btn.classList.contains('num_btn')) {
+            // changes the default number 0 in the answer container to the inputted number
+            if (answerContainer.innerHTML == "0") {
+                answerContainer.innerHTML = btn.value;
+              } 
             answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
         }
     }

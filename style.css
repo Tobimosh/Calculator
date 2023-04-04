@@ -1,82 +1,83 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-    background-color: rgb(182, 176, 176);
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: rgb(182, 176, 176);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container{
-    background-color: #131313;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 25px 35px;
-    border-radius: 15px;
-    user-select: none;
+  background-color: #131313;
+  max-width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 25px;
+  border-radius: 15px;
+  user-select: none;
 }
 
 #Display-area {
-    width: 100%;
-    margin: 3vh 0;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2, minmax(40px, auto));
-    word-wrap: break-word;
-    padding-bottom: 20px;
-    border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
-  }
-  
-  #Display-area .userInput {
-    display: flex;
-    text-align: right;
-    height: 8vh;
-    color: white;
-    font-size: xx-large;
-    line-height: 2;
-    word-wrap: break-word;
-  }
-  
-  #Display-area .answerContainer {
-    text-align: right;
-    color: rgba(150, 150, 150, 0.87);
-    height: 7px;
-    line-height: 3;
-    font-size: larger;
-  }
-  
-  .btns {
-    display: grid;
-    grid: repeat(5, 70px) / repeat(4, 70px);
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-  }
-  
-  .btns button {
-    outline: none;
-    border: none;
-    border-radius: 30px;
-    background-color: #474b6b;
-    color: #fff;
-    font-size: x-large;  
-  }
+  width: 100%;
+  margin: 3vh 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, minmax(30px, auto));
+  word-wrap: break-word;
+  padding-bottom: 10px;
+  border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
+}
 
-  .btns .fun_btn {
-    color: #000;
-    background: #ffc652;
-    font-weight: bold;
-  }
-  
-  .num_btn:hover {
-    background-color: #282a3a;
-  }
-  
-  .opt_btn:hover {
-    background-color: #ffab00;
-  }
-  
+#Display-area .userInput {
+  display: flex;
+  text-align: right;
+  height: 6vh;
+  color: white;
+  font-size: large;
+  line-height: 2;
+  word-wrap: break-word;
+}
+
+#Display-area .answerContainer {
+  text-align: right;
+  color: rgba(150, 150, 150, 0.87);
+  height: 4vh;
+  line-height: 2;
+  font-size: small;
+}
+
+.btns {
+  display: grid;
+  grid: repeat(5, 50px) / repeat(4, 50px);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.btns button {
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: #474b6b;
+  color: #fff;
+  font-size: large;  
+}
+
+.btns .fun_btn {
+  color: #000;
+  background: #ffc652;
+  font-weight: bold;
+}
+
+.num_btn:hover {
+  background-color: #282a3a;
+}
+
+.opt_btn:hover {
+  background-color: #ffab00;
+}
