@@ -33,18 +33,17 @@ buttons.forEach((btn) => {
             userInput.innerHTML = realTimeScreenValue.join('');
 
         // To evaluate answer in real time
-        if (btn.classList.contains('num_btn')) {
-            // changes the default number 0 in the answer container to the inputted number
-            if (answerContainer.innerHTML == "0") {
-                answerContainer.innerHTML = btn.value;
-              } 
-            answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
-        }
+            if (btn.classList.contains('num_btn')) {
+                // changes the default number 0 in the answer container to the inputted number
+                answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
+            }
     }
 
         // When erase button is clicked
         if (btn.id.match('backspaceBtn')) {
             realTimeScreenValue.pop();
+            userInput.innerHTML = realTimeScreenValue.join('');
+            answerContainer.innerHTML = eval(realTimeScreenValue.join(''));
         }
 
         // When clicked button is evaluate button
